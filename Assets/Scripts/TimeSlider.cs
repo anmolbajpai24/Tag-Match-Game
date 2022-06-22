@@ -5,14 +5,28 @@ using UnityEngine.UI;
 
 public class TimeSlider : MonoBehaviour
 {
+    public static TimeSlider instance;
+
     public Slider timerSlider;
     public float gameTime;
+    
 
     private bool stopGame;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+       
         stopGame = false;
         timerSlider.maxValue = gameTime;
         timerSlider.value = gameTime;

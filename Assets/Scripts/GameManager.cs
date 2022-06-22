@@ -104,6 +104,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         UiManager.instance.Text3.SetActive(false);
 
+
         UiManager.instance.Text2.SetActive(true);
         yield return new WaitForSecondsRealtime(1);
         UiManager.instance.Text2.SetActive(false);
@@ -156,7 +157,7 @@ public class GameManager : MonoBehaviour
         UiManager.instance.GameOverPanel.SetActive(true);
 
 
-
+        
 
 
     }

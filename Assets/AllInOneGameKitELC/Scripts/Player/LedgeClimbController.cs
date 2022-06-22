@@ -20,7 +20,7 @@ using System.Collections;
 public class LedgeClimbController : MonoBehaviour
 {
 
-	[SerializeField] private FixedJoystick joystick;
+	[SerializeField] private FloatingJoystick joystick;
 	
 	
 	public bool showMainRaysOnly = false; //show only the main detector rays

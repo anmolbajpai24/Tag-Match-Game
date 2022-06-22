@@ -24,7 +24,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
 
-	[SerializeField] private FixedJoystick joystick;
+	[SerializeField] private FloatingJoystick joystick;
 	
 	public Transform playerCamera; //the camera set to follow the player
 	public float gravity = 20.00f; //the amount of downward force, or "gravity," that is constantly being applied to the player
