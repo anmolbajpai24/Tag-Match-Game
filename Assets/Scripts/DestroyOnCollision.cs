@@ -17,10 +17,18 @@ public class DestroyOnCollision : MonoBehaviour
     {
         if(collision.gameObject.Equals(Enemy))
         {
-            Destroy(Enemy);
+           Destroy(Enemy);
+            GameManager.instance.EndGame();
+       }
+
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            Debug.Log("YSESEYSEYES");
             GameManager.instance.EndGame();
         }
     }
+
+    
 
     // Update is called once per frame
     void Update()

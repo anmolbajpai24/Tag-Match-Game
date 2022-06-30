@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Vines
+  - Ladder
+  - Obstacle
+  - Platform
+  - Water
+  - Coin
+  - Heart
+  - Node
   layers:
   - Default
   - TransparentFX

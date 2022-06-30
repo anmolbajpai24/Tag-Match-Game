@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 95f1bd0a813362a4a8fa12a01530ee21
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FINAL/DemoSceneRigidbody.unity
     guid: 25c007a82ba6f6644b68e548edd2e205
   - enabled: 0
     path: Assets/Scenes/GameOver.unity
     guid: ead7800040b4e924fab786b06d55eaef
+  - enabled: 1
+    path: Assets/Scenes/FINAL/VideoRecordingScene.unity
+    guid: f5443d432decc314ca7f26bc890dd03c
   m_configObjects: {}

@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("DemoSceneRigidbody");
+        SceneManager.LoadScene("VideoRecordingScene");
     }
 
     public void LoadMainMenu()

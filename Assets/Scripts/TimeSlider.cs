@@ -9,7 +9,9 @@ public class TimeSlider : MonoBehaviour
 
     public Slider timerSlider;
     public float gameTime;
-    
+    public float maxValue;
+
+    public float time;
 
     private bool stopGame;
 
@@ -26,7 +28,7 @@ public class TimeSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        maxValue = 30;
         stopGame = false;
         timerSlider.maxValue = gameTime;
         timerSlider.value = gameTime;
@@ -35,8 +37,10 @@ public class TimeSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float time = gameTime - Time.time;
-
+        //float time = gameTime - Time.time;
+        maxValue -= Time.deltaTime;
+        time = (int) maxValue;
+        
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time - minutes * 60);
 
