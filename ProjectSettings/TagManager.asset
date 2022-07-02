@@ -13,6 +13,10 @@ TagManager:
   - Coin
   - Heart
   - Node
+  - Animal
+  - Fly
+  - Climb
+  - Stair
   layers:
   - Default
   - TransparentFX
@@ -34,17 +38,17 @@ TagManager:
   - 
   - 
   - 
+  - Animal
+  - 
+  - 
+  - Enemy
   - 
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Item
   - 
   m_SortingLayers:
   - name: Default
