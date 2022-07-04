@@ -14,7 +14,7 @@ public class RandomAnimations : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
 
-            anim.SetInteger(("JumpIndex"),Random.Range(0, 6));
+            anim.SetInteger(("JumpIndex"),Random.Range(1, 4));
             
         }
     }
