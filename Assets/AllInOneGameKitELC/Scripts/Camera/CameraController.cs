@@ -1431,8 +1431,8 @@ public class CameraController : MonoBehaviour {
 					if (player.GetComponent<PlayerController>().yDeg < 30f
 					//if neither axis is locked or we are not swimming
 					&& (!follow.sideScrolling.lockXAxis && !follow.sideScrolling.lockZAxis || (!player.GetComponent<PlayerController>() || player.GetComponent<PlayerController>() && !player.GetComponent<PlayerController>().inWater))){
-						
-						transform.LookAt(lookAt + new Vector3(0f, follow.playerHeight + 1f, 0f));
+					
+					transform.LookAt(lookAt + new Vector3(0f, follow.playerHeight + 1f, 0f));
 						
 					}
 					//if player is rotated down
