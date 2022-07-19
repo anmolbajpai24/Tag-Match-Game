@@ -7,10 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int LevelDuration;
-   // public float TimerBeforeStart = 3;
+    // public float TimerBeforeStart = 3;
     //public bool TimerBeforeStartHasEnded = false;
-    
-    
+    public Animator animator;
+    public GameObject Player;
+    public GameObject Enemy;
 
 
     private void Awake()
@@ -21,6 +22,9 @@ public class GameManager : MonoBehaviour
         }
 
         instance = this;
+
+        
+        animator = Player.GetComponent<Animator>();
     }
 
 
@@ -153,11 +157,14 @@ public class GameManager : MonoBehaviour
         // Loading Game Over Scene 
         // SceneManager.LoadScene("GameOver");
         UiManager.instance.Joystick.SetActive(false);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
+
+        animator.SetBool("Died", true);
+
         UiManager.instance.GameOverPanel.SetActive(true);
 
 
-        
+       // Time.timeScale = 0;
 
 
     }
@@ -165,8 +172,12 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         UiManager.instance.Joystick.SetActive(false);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         UiManager.instance.GameWinPanel.SetActive(true);
+
+        Destroy(Enemy);
+
+        animator.SetBool("Won", true);
     }
     #endregion
 

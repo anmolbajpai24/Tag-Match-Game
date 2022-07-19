@@ -17,6 +17,8 @@ public class DestroyOnCollision : MonoBehaviour
     {
         if(collision.gameObject.Equals(Enemy))
         {
+
+            Debug.Log("WORKING");
            Destroy(Enemy);
             GameManager.instance.EndGame();
        }
