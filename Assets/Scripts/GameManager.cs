@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject Enemy;
 
+    //public GameObject flikeringLights;
+
 
     private void Awake()
     {
@@ -33,6 +35,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         Timer();
+
+       // StartCoroutine("flicker");
     }
 
     // Update is called once per frame
@@ -44,6 +48,11 @@ public class GameManager : MonoBehaviour
 
        
 
+    }
+
+    private void FixedUpdate()
+    {
+       // StartCoroutine("flicker");
     }
 
     // }
@@ -69,6 +78,17 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+   // IEnumerator flicker()
+    //{
+       
+        
+        //   flikeringLights.SetActive(true);
+          //  yield return new WaitForSeconds(2);
+           // flikeringLights.SetActive(false);
+        
+
+    //}
 
     public void StartButtonPress()
     {
