@@ -181,7 +181,12 @@ public class GameManager : MonoBehaviour
 
         animator.SetBool("Died", true);
 
-        UiManager.instance.GameOverPanel.SetActive(true);
+        if(animator.GetBool("Won")== false)
+        {
+
+            UiManager.instance.GameOverPanel.SetActive(true);
+        }
+        
 
 
        // Time.timeScale = 0;
@@ -193,10 +198,16 @@ public class GameManager : MonoBehaviour
     {
         UiManager.instance.Joystick.SetActive(false);
         //Time.timeScale = 0;
-        UiManager.instance.GameWinPanel.SetActive(true);
+       // UiManager.instance.GameWinPanel.SetActive(true);
 
         Destroy(Enemy);
 
+
+        if (animator.GetBool("Died") == false)
+        {
+
+            UiManager.instance.GameWinPanel.SetActive(true);
+        }
         animator.SetBool("Won", true);
     }
     #endregion
