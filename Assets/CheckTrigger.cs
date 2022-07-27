@@ -7,6 +7,7 @@ public class CheckTrigger : MonoBehaviour
     public static CheckTrigger instance;
         
     public GameObject Player;
+    public bool isInTrigger = false;
 
     public void Awake()
     {
@@ -31,7 +32,12 @@ public class CheckTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entered");
-        //Pathfinding.AIDestinationSetter.instance.target = Player.transform;
+        if(other.gameObject.tag =="Target")
+        {
+            Debug.Log("Entered");
+            isInTrigger = true;
+        }
+        
+       // Pathfinding.AIDestinationSetter.instance.target = Player.transform;
     }
 }
