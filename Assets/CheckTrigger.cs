@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class CheckTrigger : MonoBehaviour
 {
+    public static CheckTrigger instance;
+        
+    public GameObject Player;
+
+    public void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +32,6 @@ public class CheckTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Entered");
+        //Pathfinding.AIDestinationSetter.instance.target = Player.transform;
     }
 }
