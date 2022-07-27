@@ -17,6 +17,7 @@ TagManager:
   - Fly
   - Climb
   - Stair
+  - Target
   layers:
   - Default
   - TransparentFX

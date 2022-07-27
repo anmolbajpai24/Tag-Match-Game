@@ -34,8 +34,8 @@ namespace Pathfinding {
 
         void OnEnable () {
 
-		
 
+			target = Targetforbot.transform;
 			ai = GetComponent<IAstarAI>();
 			// Update the destination right before searching for a path as well.
 			// This is enough in theory, but this script will also update the destination every
@@ -58,7 +58,7 @@ namespace Pathfinding {
 			
 			
 			
-			target = Targetforbot.transform;
+			
 		}
 	}
 }

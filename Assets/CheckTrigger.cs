@@ -36,8 +36,9 @@ public class CheckTrigger : MonoBehaviour
         {
             Debug.Log("Entered");
             isInTrigger = true;
+            Pathfinding.AIDestinationSetter.instance.target = Player.transform;
         }
         
-       // Pathfinding.AIDestinationSetter.instance.target = Player.transform;
+        
     }
 }
