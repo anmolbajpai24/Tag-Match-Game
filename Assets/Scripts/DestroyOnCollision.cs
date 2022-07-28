@@ -8,26 +8,33 @@ public class DestroyOnCollision : MonoBehaviour
     public GameObject Enemy;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
         
+
+        GetComponent<DestroyOnCollision>().enabled = false;
+
+        yield return new WaitForSeconds(5);
+
+        GetComponent<DestroyOnCollision>().enabled = true;
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.Equals(Enemy))
+        if (GetComponent<DestroyOnCollision>().isActiveAndEnabled)
         {
+            if (collision.gameObject.Equals(Enemy))
+            {
 
-            Debug.Log("WORKING");
-           Destroy(Enemy);
-            GameManager.instance.EndGame();
-       }
-
-        if (collision.gameObject.tag == "Obstacle")
-        {
-            Debug.Log("YSESEYSEYES");
-            GameManager.instance.EndGame();
+                Debug.Log("WORKING");
+                Destroy(Enemy);
+                GameManager.instance.EndGame();
+            }
         }
+       
+
+       
     }
 
     
